@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import MainSection from "../components/MainSection";
 import Footer from "../components/Footer";
+import AwardSection from "../components/AwardSection";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/" />
         </Routes> */}
         <MainSection />
+        <AwardSection />
         <Footer />
       </Router>
     </>
