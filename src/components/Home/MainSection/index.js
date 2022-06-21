@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-import mainBackgroundSrc from "../../images/mainBackground.png";
-import phoneScreenSrc from "../../images/phoneScreen01.png";
+import mainBackgroundSrc from "../../../images/mainBackground.png";
+import phoneScreen01Src from "../../../images/phoneScreen01.png";
 
 const MainBackground = styled.div`
   position: relative;
@@ -82,7 +82,7 @@ const SubTitle = styled.p`
   }
 `;
 
-const MarketLinksContainer = styled(Link)`
+const MarketLinksContainer = styled.div`
   display: none;
   margin-top: 76px;
 
@@ -130,9 +130,9 @@ const PhoneFrame = styled.div`
   background-color: rgb(250, 250, 250);
   position: absolute;
   /* inset: 318px auto -96px 50%; */
-  transform: translateX(-50%);
+  /* transform: translateX(-50%);
+  inset: 229px 0px auto auto; */
 
-  inset: 229px 0px auto auto;
   ::after {
     content: "";
     position: absolute;
@@ -149,10 +149,10 @@ const PhoneFrame = styled.div`
     inset: 318px auto -96px 50%;
 
     ::after {
-      width: 113px;
-      height: 27px;
-      left: 59px;
-      border-radius: 13px;
+      width: 162px;
+      height: 38px;
+      left: 84px;
+      border-radius: 18px;
     }
   }
 
@@ -163,11 +163,18 @@ const PhoneFrame = styled.div`
     box-shadow: rgb(0 0 0 / 18%) 0px 13px 24px 0px,
       rgb(0 0 0 / 8%) 0px -6px 9px 0px inset;
     inset: 229px 0px auto auto;
+
+    ::after {
+      width: 162px;
+      height: 38px;
+      left: 84px;
+      border-radius: 18px;
+    }
   }
 `;
 
 const PhoneScreen = styled.div`
-  background-image: url(${phoneScreenSrc});
+  background-image: url(${phoneScreen01Src});
   background-repeat: no-repeat;
   position: absolute;
 
@@ -191,6 +198,14 @@ const PhoneScreen = styled.div`
 `;
 
 export default function MainSection(props) {
+  const navigate = useNavigate();
+
+  const navigateMarketLinksButton = () => {
+    navigate(
+      "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
+    );
+  };
+
   return (
     <MainBackground>
       <MainSectionContainer>
@@ -200,12 +215,10 @@ export default function MainSection(props) {
             트리플로 한 번에
           </Title>
           <SubTitle>예약부터 일정까지 앱 하나로 간편하게 준비하세요.</SubTitle>
-          <MarketLinksContainer
-            to={
-              "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-            }
-          >
-            <MarketLinksButton>앱 설치하기</MarketLinksButton>
+          <MarketLinksContainer>
+            <MarketLinksButton onClick={navigateMarketLinksButton}>
+              앱 설치하기
+            </MarketLinksButton>
           </MarketLinksContainer>
         </TitleContainer>
         <PhoneContainer>

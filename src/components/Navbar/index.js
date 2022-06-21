@@ -34,6 +34,11 @@ const NavContainer = styled.div`
   padding: 0px 6px;
   height: 50px;
   box-sizing: border-box;
+
+  @media (min-width: 1142px) {
+    height: 80px;
+    padding: 0px 42px;
+  }
 `;
 
 const LogoWrapper = styled(Link)`

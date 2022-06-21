@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import badgeTripleSrc from "../../images/badgeTriple.png";
-import badgePlayStoreSrc from "../../images/badgePlayStore.png";
-import badgeAppleSrc from "../../images/badgeApple.png";
+import badgeTripleSrc from "../../../images/badgeTriple.png";
+import badgePlayStoreSrc from "../../../images/badgePlayStore.png";
+import badgeAppleSrc from "../../../images/badgeApple.png";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
 

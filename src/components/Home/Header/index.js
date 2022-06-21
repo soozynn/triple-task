@@ -2,12 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import logoSrc from "../../images/logo.png";
+import logoSrc from "../../../images/logo.png";
 
 const HeaderContainer = styled.nav`
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -17,7 +14,6 @@ const HeaderContainer = styled.nav`
   position: absolute;
   right: 0px;
   left: 0px;
-  /* background-color: transparent; */
 
   @media (max-width: 1141px) {
     padding: 42px 14px 0px;
