@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -76,8 +76,6 @@ export default function Navbar() {
     } else {
       setIsScrollDown(false);
     }
-
-    console.log(isScrollDown);
   };
 
   window.addEventListener("scroll", handleScrollDown);
