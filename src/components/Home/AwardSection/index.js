@@ -100,20 +100,57 @@ export default function AwardSection(props) {
       <AwardSectionContainer>
         <ContentLogo>2021년 12월 기준</ContentLogo>
         <ContentArticles>
-          <AwardTitle number="700" unit="만 명" text="의 여행자" />
-          <AwardTitle number="100" unit="만 개" text="의 여행 리뷰" />
-          <AwardTitle number="470" unit="만 개" text="의 여행 일정" />
+          <AwardTitle
+            title={
+              <>
+                <strong>
+                  <span>700</span>만 명
+                </strong>
+                의 여행자
+              </>
+            }
+          />
+          <AwardTitle
+            title={
+              <>
+                <strong>
+                  <span>100</span>만 개
+                </strong>
+                의 여행 리뷰
+              </>
+            }
+          />
+          <AwardTitle
+            title={
+              <>
+                <strong>
+                  <span>470</span>만 개
+                </strong>
+                의 여행 일정
+              </>
+            }
+          />
         </ContentArticles>
         <AwardItemsContainer>
           <AwardItem
             src={badgePlayStoreSrc}
-            itme={"2018 구글 플레이스토어"}
-            title={"올해의 앱 최우수상 수상"}
+            title={
+              <>
+                2018 구글 플레이스토어
+                <br />
+                올해의 앱 최우수상 수상
+              </>
+            }
           />
           <AwardItem
             src={badgeAppleSrc}
-            itme={"2018 애플 앱스토어"}
-            title={"오늘의 여행앱 선정"}
+            title={
+              <>
+                2018 애플 앱스토어
+                <br />
+                오늘의 여행앱 선정
+              </>
+            }
           />
         </AwardItemsContainer>
       </AwardSectionContainer>

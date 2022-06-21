@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 
 const AwardItemContainer = styled.div`
   display: inline-block;
-  font-family: sans-serif;
   background-image: ${(props) => `url(${props.src})`};
   background-position: left top;
   background-repeat: no-repeat;
@@ -19,25 +18,27 @@ const AwardItemContainer = styled.div`
     line-height: 22px;
     margin-right: 39px;
   }
+
+  @media (max-width: 1141px) {
+    background-size: 39px 39px;
+    height: 39px;
+    padding: 4px 0px 4px 45px;
+    font-size: 10px;
+    line-height: 15px;
+
+    &:first-child {
+      margin-right: 28.5px;
+    }
+  }
 `;
 
-export default function AwardItem({ props }) {
-  console.log(props);
-  if (!props) return;
+export default function AwardItem(props) {
+  const { src, title } = props;
 
-  const { src, item, title } = props;
-
-  return (
-    <AwardItemContainer src={src}>
-      {item}
-      <br />
-      {title}
-    </AwardItemContainer>
-  );
+  return <AwardItemContainer src={src}>{title}</AwardItemContainer>;
 }
 
 AwardItem.propTypes = {
-  src: PropTypes.string,
-  item: PropTypes.string,
-  title: PropTypes.string,
+  src: PropTypes.string.isRequired,
+  title: PropTypes.object.isRequired,
 };

@@ -63,6 +63,6 @@ export default function CenterTitle(props) {
 }
 
 CenterTitle.propTypes = {
-  title: PropTypes.string.isRequired,
-  subTitle: PropTypes.string.isRequired,
+  title: PropTypes.object.isRequired,
+  subTitle: PropTypes.object.isRequired,
 };

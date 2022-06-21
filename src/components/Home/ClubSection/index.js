@@ -147,21 +147,17 @@ const ClubLinks = styled(Link)`
 
 export default function ClubSection() {
   return (
-    <TransitionGroup>
-      <CSSTransition classNames="fade">
-        <ClubSectionBackground>
-          <ClubSectionContainer>
-            <ContentText>Recruiting Now!</ContentText>
-            <LogoImage></LogoImage>
-            <SubText></SubText>
-            <ClubLinks
-              to={
-                "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-              }
-            ></ClubLinks>
-          </ClubSectionContainer>
-        </ClubSectionBackground>
-      </CSSTransition>
-    </TransitionGroup>
+    <ClubSectionBackground>
+      <ClubSectionContainer>
+        <ContentText>Recruiting Now!</ContentText>
+        <LogoImage></LogoImage>
+        <SubText></SubText>
+        <ClubLinks
+          to={
+            "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
+          }
+        ></ClubLinks>
+      </ClubSectionContainer>
+    </ClubSectionBackground>
   );
 }
