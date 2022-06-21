@@ -3,11 +3,14 @@ import { createGlobalStyle } from "styled-components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "../components/Home";
-import About from "../components/About";
+import MyPage from "../components/MyPage/index";
+import Login from "../components/Login";
 
 const GlobalStyles = createGlobalStyle`
   :root {
+    --color-gray: rgba(58,58,58,1);
     --color-gray200: rgba(58,58,58,0.2);
+    --color-gray500: rgba(58,58,58,0.5);
     --color-gray600: rgba(58,58,58,0.6);
   }
 
@@ -24,6 +27,10 @@ const GlobalStyles = createGlobalStyle`
     border: 0px;
     font: inherit;
     vertical-align: baseline;
+  }
+
+  a:any-link {
+    text-decoration: none;
 }
 `;
 
@@ -34,7 +41,8 @@ export default function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/my-bookings" element={<About />} />
+          <Route path="/my-bookings" element={<MyPage />} />
+          <Route path="/login" element={<Login />} />
           {/* <Route element={<NotFound />} /> */}
         </Routes>
       </Router>

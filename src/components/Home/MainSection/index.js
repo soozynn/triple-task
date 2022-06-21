@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import mainBackgroundSrc from "../../../images/mainBackground.png";
 import phoneScreen01Src from "../../../images/phoneScreen01.png";
-import Button from "../../shared/Button";
+import InstallButton from "../../shared/InstallButton";
 
 const MainBackground = styled.div`
   position: relative;
@@ -79,41 +79,6 @@ const SubTitle = styled.p`
     margin: 18px 0px 0px 1px;
     font-size: 17px;
     line-height: 2;
-  }
-`;
-
-const MarketLinksContainer = styled.div`
-  display: none;
-  margin-top: 76px;
-
-  @media (min-width: 1142px) {
-    display: block;
-  }
-`;
-
-const MarketLinksButton = styled.button`
-  box-sizing: border-box;
-  float: none;
-
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgb(255, 255, 255);
-  font-weight: bold;
-  transition: all 200ms ease-in-out 0s;
-  width: 180px;
-  height: 50px;
-  line-height: 50px;
-  border-radius: 25px;
-  color: rgb(255, 255, 255);
-
-  &:hover {
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
   }
 `;
 
@@ -286,7 +251,7 @@ export default function MainSection() {
             트리플로 한 번에
           </Title>
           <SubTitle>예약부터 일정까지 앱 하나로 간편하게 준비하세요.</SubTitle>
-          <Button />
+          <InstallButton />
         </TitleContainer>
         <PhoneContainer>
           <BigPhoneFrameWrapper>

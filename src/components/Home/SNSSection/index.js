@@ -6,7 +6,7 @@ import facebookIcon from "../../../images/facebook.png";
 import instagramIcon from "../../../images/instagram.png";
 import blogIcon from "../../../images/blog.png";
 import brunchIcon from "../../../images/brunch.png";
-import Button from "../../shared/Button";
+import InstallButton from "../../shared/InstallButton";
 import Icon from "./Icon";
 
 const SNSSectionContainer = styled.div`
@@ -131,7 +131,7 @@ export default function SNSSection() {
           </SubTitle>
         </Title>
         <ButtonWrapper>
-          <Button margintTop={"30px"} />
+          <InstallButton margintTop={"30px"} />
         </ButtonWrapper>
       </SNSSectionContent>
       <Logo src={logoSrc} />
