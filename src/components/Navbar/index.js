@@ -72,6 +72,7 @@ export default function Navbar() {
 
   const handleScrollDown = () => {
     if (window.scrollY >= 60) {
+      // clubSection이하로도 설정 필요
       setIsScrollDown(true);
     } else {
       setIsScrollDown(false);

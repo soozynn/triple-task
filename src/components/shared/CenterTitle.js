@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const CenterTitleContainer = styled.h2`
   font-weight: 500;
@@ -51,17 +52,17 @@ const CenterSubTitle = styled.div`
 `;
 
 export default function CenterTitle(props) {
+  const { title, subTitle } = props;
+
   return (
     <>
-      <CenterTitleContainer>
-        모든 예약을
-        <br />
-        최저가로 한 번에!
-      </CenterTitleContainer>
-      <CenterSubTitle>
-        항공권부터 숙소, 투어·티켓까지 최저가로 예약.
-        <br /> 트리플 전용 특가는 보너스.
-      </CenterSubTitle>
+      <CenterTitleContainer>{title}</CenterTitleContainer>
+      <CenterSubTitle>{subTitle}</CenterSubTitle>
     </>
   );
 }
+
+CenterTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.string.isRequired,
+};

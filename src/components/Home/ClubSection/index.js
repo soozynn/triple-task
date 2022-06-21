@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
 import backgroundSrc from "../../../images/clubBackground.svg";
@@ -26,7 +27,7 @@ const ClubSectionContainer = styled.div`
   }
 `;
 
-const ContentText = styled.h1`
+const ContentText = styled.h3`
   font-weight: bold;
   color: rgb(255, 255, 255);
   margin: 0px;
@@ -44,11 +45,12 @@ const ContentText = styled.h1`
     padding-top: 158px;
     font-size: 20px;
   }
-  /* fade-enter-done {
+
+  .fade-enter-done {
     opacity: 1;
     transform: translateY(0%);
     transition: all 700ms ease-in-out 0s;
-} */
+  }
 `;
 
 const LogoImage = styled.h2`
@@ -71,11 +73,11 @@ const LogoImage = styled.h2`
     margin: 30px auto 20px;
   }
 
-  /* fade-enter-done {
+  .fade-enter-done {
     opacity: 1;
     transform: translateY(0%);
     transition: all 700ms ease-in-out 100ms;
-} */
+  }
 `;
 
 const SubText = styled.p`
@@ -100,11 +102,11 @@ const SubText = styled.p`
     letter-spacing: -0.5px;
   }
 
-  /* fade-enter-done {
+  .fade-enter-done {
     opacity: 1;
     transform: translateY(0%);
     transition: all 700ms ease-in-out 200ms;
-} */
+  }
 `;
 
 const ClubLinks = styled(Link)`
@@ -136,26 +138,30 @@ const ClubLinks = styled(Link)`
     letter-spacing: -0.2px;
   }
 
-  /* fade-enter-done {
+  .fade-enter-done {
     opacity: 1;
     transform: translateY(0%);
     transition: all 700ms ease-in-out 300ms;
-} */
+  }
 `;
 
 export default function ClubSection() {
   return (
-    <ClubSectionBackground>
-      <ClubSectionContainer>
-        <ContentText>Recruiting Now!</ContentText>
-        <LogoImage></LogoImage>
-        <SubText></SubText>
-        <ClubLinks
-          to={
-            "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-          }
-        ></ClubLinks>
-      </ClubSectionContainer>
-    </ClubSectionBackground>
+    <TransitionGroup>
+      <CSSTransition classNames="fade">
+        <ClubSectionBackground>
+          <ClubSectionContainer>
+            <ContentText>Recruiting Now!</ContentText>
+            <LogoImage></LogoImage>
+            <SubText></SubText>
+            <ClubLinks
+              to={
+                "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
+              }
+            ></ClubLinks>
+          </ClubSectionContainer>
+        </ClubSectionBackground>
+      </CSSTransition>
+    </TransitionGroup>
   );
 }

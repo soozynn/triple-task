@@ -58,11 +58,26 @@ const PhonesContainer = styled.div`
   }
 `;
 
-export default function ReservationSection(props) {
+export default function ReservationSection() {
   return (
     <ReservationBackground>
       <ReservationContainer>
-        <CenterTitle />
+        <CenterTitle
+          title={
+            <>
+              모든 예약을
+              <br />
+              최저가로 한 번에!
+            </>
+          }
+          subTitle={
+            <>
+              항공권부터 숙소, 투어·티켓까지 최저가로 예약.
+              <br />
+              트리플 전용 특가는 보너스.
+            </>
+          }
+        />
         <PhonesContainer>
           <Phone src={phoneScreen02Src} />
           <Phone src={phoneScreen03Src} />
