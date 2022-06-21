@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import mainBackgroundSrc from "../images/mainBackground.png";
-import phoneScreenSrc from "../images/phoneScreen01.png";
+import mainBackgroundSrc from "../../images/mainBackground.png";
+import phoneScreenSrc from "../../images/phoneScreen01.png";
 
 const MainBackground = styled.div`
   position: relative;
@@ -45,6 +45,8 @@ const Title = styled.h1`
   font-weight: bold;
   margin: 0px 0px 0px -4px;
   color: rgb(255, 255, 255);
+  transition-duration: 600ms;
+  transition-delay: 0ms;
 
   @media (max-width: 1141px) {
     font-size: 48px;
@@ -63,6 +65,8 @@ const SubTitle = styled.p`
   letter-spacing: 0px;
   color: rgb(255, 255, 255);
   font-weight: 500;
+  transition-duration: 900ms;
+  transition-delay: 0ms;
 
   @media (max-width: 1141px) {
     font-size: 16px;
@@ -113,7 +117,10 @@ const MarketLinksButton = styled.button`
   }
 `;
 
-const PhoneContainer = styled.div``;
+const PhoneContainer = styled.div`
+  transition-duration: 700ms;
+  transition-delay: 0ms;
+`;
 
 const PhoneFrameWrapper = styled.div`
   display: block;

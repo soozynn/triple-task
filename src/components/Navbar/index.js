@@ -1,22 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import logoSrc from "../images/logoDark.png";
+import blackLogoSrc from "../../images/logoDark.svg";
 
 const NavBackground = styled.nav`
+  /* fade-enter-done {
+    opacity: 1;
+    transform: translateY(0%);
+  } */
+
+  transition: height 250ms ease 0s;
+  overflow: hidden;
   top: 0px;
   height: 50px;
 
-  transition: ${(props) =>
-    props.isScrollDown ? "height 250ms ease 0s" : "none"};
-  overflow: hidden;
-  background-color: none;
+  /* opacity: 0;
+    transition: all 400ms ease-in-out 0s;
+    transform: translateY(-100%);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px; */
 `;
 
 const NavContainer = styled.div`
   background-color: rgb(255, 255, 255);
-  display: ${(props) => (props.isScrollDown ? "flex" : "none")};
+  display: flex;
+  /* display: ${(props) => (props.isScrollDown ? "flex" : "none")}; */
   -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid rgb(239, 239, 239);
@@ -55,11 +66,13 @@ export default function Navbar() {
   const [isScrollDown, setIsScrollDown] = useState(false);
 
   const handleScrollDown = () => {
-    if (window.scrollY >= 90) {
+    if (window.scrollY >= 60) {
       setIsScrollDown(true);
     } else {
       setIsScrollDown(false);
     }
+
+    console.log(isScrollDown);
   };
 
   window.addEventListener("scroll", handleScrollDown);
@@ -68,7 +81,7 @@ export default function Navbar() {
     <NavBackground props={isScrollDown}>
       <NavContainer>
         <LogoWrapper to="/">
-          <Logo src={logoSrc} />
+          <Logo src={blackLogoSrc} />
         </LogoWrapper>
         <MyBookingsWrapper>
           <MyBookings to="/my-bookings">내 예약</MyBookings>

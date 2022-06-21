@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import badgeTripleSrc from "../images/badgeTriple.png";
-import badgePlayStoreSrc from "../images/playStore.png";
+import badgeTripleSrc from "../../images/badgeTriple.png";
+import badgePlayStoreSrc from "../../images/badgePlayStore.png";
+import badgeAppleSrc from "../../images/badgeApple.png";
+import AwardItem from "./AwardItem";
+import AwardTitle from "./AwardTitle";
 
 const AwardSectionBackground = styled.div`
   position: relative;
@@ -48,6 +51,15 @@ const ContentLogo = styled.div`
     padding-top: 280px;
     font-size: 15px;
   }
+
+  @media (max-width: 1141px) {
+    margin: 80px auto 20px;
+    width: 200px;
+    height: 169px;
+    background-size: 200px 169px;
+    padding-top: 137px;
+    font-size: 10px;
+  }
 `;
 
 const ContentArticles = styled.div`
@@ -58,24 +70,27 @@ const ContentArticles = styled.div`
   vertical-align: baseline;
 
   color: rgb(58, 58, 58);
-`;
-
-const AwardItemContainer = styled.div`
-  display: inline-block;
-  font-family: sans-serif;
-  background-image: url(${badgePlayStoreSrc});
-  background-position: left top;
-  background-repeat: no-repeat;
-  color: rgba(58, 58, 58, 0.8);
-  font-weight: bold;
 
   @media (min-width: 1142px) {
-    background-size: 54px 54px;
-    height: 54px;
-    padding: 5px 0px 5px 62px;
-    font-size: 14px;
-    line-height: 22px;
-    margin-right: 39px;
+    margin-left: 623px;
+    padding-top: 150px;
+  }
+
+  @media (max-width: 1141px) {
+    text-align: center;
+  }
+`;
+
+const AwardItemsContainer = styled.div`
+  white-space: nowrap;
+
+  @media (min-width: 1142px) {
+    margin: 50px 0px 140px 623px;
+  }
+
+  @media (max-width: 1141px) {
+    width: 300px;
+    margin: 50px auto 80px;
   }
 `;
 
@@ -85,24 +100,22 @@ export default function AwardSection(props) {
       <AwardSectionContainer>
         <ContentLogo>2021년 12월 기준</ContentLogo>
         <ContentArticles>
-          <div>
-            <strong>
-              <span>700</span>만 명
-            </strong>
-            의 여행자
-          </div>
-          {/* <div></div>
-          <div></div>
-          동일한 컴포넌트 쪼개기 */}
+          <AwardTitle number="700" unit="만 명" text="의 여행자" />
+          <AwardTitle number="100" unit="만 개" text="의 여행 리뷰" />
+          <AwardTitle number="470" unit="만 개" text="의 여행 일정" />
         </ContentArticles>
-        <AwardItemContainer>
-          <div>
-            2018 구글 플레이스토어
-            <br />
-            올해의 앱 최우수상 수상
-          </div>
-          {/* 동일한 컴포넌트 재활용 필요 */}
-        </AwardItemContainer>
+        <AwardItemsContainer>
+          <AwardItem
+            src={badgePlayStoreSrc}
+            itme={"2018 구글 플레이스토어"}
+            title={"올해의 앱 최우수상 수상"}
+          />
+          <AwardItem
+            src={badgeAppleSrc}
+            itme={"2018 애플 앱스토어"}
+            title={"오늘의 여행앱 선정"}
+          />
+        </AwardItemsContainer>
       </AwardSectionContainer>
     </AwardSectionBackground>
   );

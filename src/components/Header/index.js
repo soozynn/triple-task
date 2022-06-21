@@ -2,13 +2,22 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import logoSrc from "../images/logo.png";
+import logoSrc from "../../images/logo.png";
 
 const HeaderContainer = styled.nav`
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 42px 14px 0px;
-  background-color: none;
+  z-index: 1;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  /* background-color: transparent; */
 
   @media (max-width: 1141px) {
     padding: 42px 14px 0px;
@@ -16,10 +25,6 @@ const HeaderContainer = styled.nav`
 
   @media (min-width: 1142px) {
     padding: 83px 50px 17px;
-    z-index: 1;
-    position: absolute;
-    right: 0px;
-    left: 0px;
   }
 `;
 
