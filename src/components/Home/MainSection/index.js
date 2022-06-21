@@ -1,9 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 import mainBackgroundSrc from "../../../images/mainBackground.png";
 import phoneScreen01Src from "../../../images/phoneScreen01.png";
+import Button from "../../shared/Button";
 
 const MainBackground = styled.div`
   position: relative;
@@ -122,11 +122,90 @@ const PhoneContainer = styled.div`
   transition-delay: 0ms;
 `;
 
-const PhoneFrameWrapper = styled.div`
+const BigPhoneFrameWrapper = styled.div`
   display: block;
 `;
 
-const PhoneFrame = styled.div`
+const BigPhoneFrame = styled.div`
+  background-color: rgb(250, 250, 250);
+  position: absolute;
+  /* inset: 318px auto -96px 50%; */
+  /* transform: translateX(-50%);
+  inset: 229px 0px auto auto; */
+
+  ::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: rgb(250, 250, 250);
+  }
+
+  /* @media (max-width: 1141px) {
+    width: 231px;
+    height: 476px;
+    border-radius: 34px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 9px 17px 0px,
+      rgb(0 0 0 / 8%) 0px -4px 6px 0px inset;
+    inset: 318px auto -96px 50%;
+
+    ::after {
+      width: 113px;
+      height: 27px;
+      left: 59px;
+      border-radius: 13px;
+    }
+  } */
+
+  @media (min-width: 1142px) {
+    width: 330px;
+    height: 680px;
+    border-radius: 48px;
+    box-shadow: rgb(0 0 0 / 18%) 0px 13px 24px 0px,
+      rgb(0 0 0 / 8%) 0px -6px 9px 0px inset;
+    inset: 229px 0px auto auto;
+
+    ::after {
+      width: 162px;
+      height: 38px;
+      left: 84px;
+      border-radius: 18px;
+    }
+  }
+`;
+
+const BigPhoneScreen = styled.div`
+  background-image: url(${phoneScreen01Src});
+  background-repeat: no-repeat;
+  position: absolute;
+
+  /* @media (max-width: 1141px) {
+    width: 209px;
+    height: 454px;
+    top: 11px;
+    left: 11px;
+    border-radius: 23px;
+    background-size: 209px 454px;
+  } */
+
+  @media (min-width: 1142px) {
+    width: 300px;
+    height: 650px;
+    top: 15px;
+    left: 15px;
+    border-radius: 33px;
+    background-size: 300px 650px;
+  }
+`;
+
+const SmallPhoneFrameWrapper = styled.div`
+  display: block;
+
+  @media (min-width: 1142px) {
+    display: none;
+  }
+`;
+
+const SmallPhoneFrame = styled.div`
   background-color: rgb(250, 250, 250);
   position: absolute;
   /* inset: 318px auto -96px 50%; */
@@ -149,13 +228,13 @@ const PhoneFrame = styled.div`
     inset: 318px auto -96px 50%;
 
     ::after {
-      width: 162px;
-      height: 38px;
-      left: 84px;
-      border-radius: 18px;
+      width: 113px;
+      height: 27px;
+      left: 59px;
+      border-radius: 13px;
     }
   }
-
+  /*
   @media (min-width: 1142px) {
     width: 330px;
     height: 680px;
@@ -170,10 +249,10 @@ const PhoneFrame = styled.div`
       left: 84px;
       border-radius: 18px;
     }
-  }
+  } */
 `;
 
-const PhoneScreen = styled.div`
+const SmallPhoneScreen = styled.div`
   background-image: url(${phoneScreen01Src});
   background-repeat: no-repeat;
   position: absolute;
@@ -186,7 +265,7 @@ const PhoneScreen = styled.div`
     border-radius: 23px;
     background-size: 209px 454px;
   }
-
+  /*
   @media (min-width: 1142px) {
     width: 300px;
     height: 650px;
@@ -194,18 +273,10 @@ const PhoneScreen = styled.div`
     left: 15px;
     border-radius: 33px;
     background-size: 300px 650px;
-  }
+  } */
 `;
 
-export default function MainSection(props) {
-  const navigate = useNavigate();
-
-  const navigateMarketLinksButton = () => {
-    navigate(
-      "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-    );
-  };
-
+export default function MainSection() {
   return (
     <MainBackground>
       <MainSectionContainer>
@@ -215,18 +286,19 @@ export default function MainSection(props) {
             트리플로 한 번에
           </Title>
           <SubTitle>예약부터 일정까지 앱 하나로 간편하게 준비하세요.</SubTitle>
-          <MarketLinksContainer>
-            <MarketLinksButton onClick={navigateMarketLinksButton}>
-              앱 설치하기
-            </MarketLinksButton>
-          </MarketLinksContainer>
+          <Button />
         </TitleContainer>
         <PhoneContainer>
-          <PhoneFrameWrapper>
-            <PhoneFrame>
-              <PhoneScreen />
-            </PhoneFrame>
-          </PhoneFrameWrapper>
+          <BigPhoneFrameWrapper>
+            <BigPhoneFrame>
+              <BigPhoneScreen />
+            </BigPhoneFrame>
+          </BigPhoneFrameWrapper>
+          <SmallPhoneFrameWrapper>
+            <SmallPhoneFrame>
+              <SmallPhoneScreen />
+            </SmallPhoneFrame>
+          </SmallPhoneFrameWrapper>
         </PhoneContainer>
       </MainSectionContainer>
     </MainBackground>
