@@ -22,3 +22,4 @@
 - img 태그와 background 이미지의 차이
 
 - window.location.href 와 window.location.replace()의 차이, window.open
+
