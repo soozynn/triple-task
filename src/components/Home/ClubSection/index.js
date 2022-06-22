@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import styled from "styled-components";
 
@@ -109,7 +108,7 @@ const SubText = styled.p`
   }
 `;
 
-const ClubLinks = styled(Link)`
+const ClubLinksButton = styled.button`
   display: block;
   margin: 0px auto;
   border-radius: 30px;
@@ -121,6 +120,10 @@ const ClubLinks = styled(Link)`
   text-decoration: none;
   opacity: 0;
   transform: translateY(10px);
+
+  &:hover {
+    cursor: pointer;
+  }
 
   @media (min-width: 1142px) {
     width: 200px;
@@ -146,17 +149,20 @@ const ClubLinks = styled(Link)`
 `;
 
 export default function ClubSection() {
+  const handleClickLinksButton = () => {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web";
+  };
+
   return (
     <ClubSectionBackground>
       <ClubSectionContainer>
         <ContentText>Recruiting Now!</ContentText>
         <LogoImage></LogoImage>
         <SubText></SubText>
-        <ClubLinks
-          to={
-            "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-          }
-        ></ClubLinks>
+        <ClubLinksButton onClick={handleClickLinksButton}>
+          자세히 보기
+        </ClubLinksButton>
       </ClubSectionContainer>
     </ClubSectionBackground>
   );

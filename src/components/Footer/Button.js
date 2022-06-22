@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const ButtonWrapper = styled(Link)`
+const ButtonWrapper = styled.button`
   box-sizing: border-box;
   height: 32px;
   padding: 9px 12px;
@@ -15,7 +14,10 @@ const ButtonWrapper = styled(Link)`
   border: 1px solid var(--color-gray200);
   border-radius: 4px;
   background-color: rgb(250, 250, 250);
-  cursor: pointer;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const InstallIcon = styled.img`
@@ -27,8 +29,12 @@ const InstallIcon = styled.img`
 export default function Button(props) {
   const { children, text, src, location } = props;
 
+  const handleClickButton = () => {
+    window.location.href = location;
+  };
+
   return (
-    <ButtonWrapper to={location}>
+    <ButtonWrapper onClick={handleClickButton}>
       {children}
       <span>{text}</span>
       {src && <InstallIcon src={src} alt="app-download" />}

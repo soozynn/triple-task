@@ -20,3 +20,5 @@
 - 아토믹 디자인 -> 컴포넌트 하나 당 하나의 역할만 수행하고 있는가?
 
 - img 태그와 background 이미지의 차이
+
+- window.location.href 와 window.location.replace()의 차이, window.open

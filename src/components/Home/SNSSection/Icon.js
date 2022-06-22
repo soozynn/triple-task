@@ -1,9 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
-const IconLink = styled(Link)``;
+const IconLink = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+`;
 
 const IconImage = styled.img`
   @media (min-width: 1142px) {
@@ -20,14 +23,18 @@ const IconImage = styled.img`
 export default function Icon(props) {
   const { location, src } = props;
 
+  const handleClickIcon = () => {
+    window.open(location);
+  };
+
   return (
-    <IconLink to={location} target="_blank">
-      <IconImage src={src}></IconImage>
+    <IconLink onClick={handleClickIcon}>
+      <IconImage src={src} alt="sns-icon" />
     </IconLink>
   );
 }
 
 Icon.propTypes = {
-  location: PropTypes.string,
-  src: PropTypes.string,
+  location: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
