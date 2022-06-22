@@ -7,26 +7,13 @@ const PhoneFrame = styled.div`
   display: inline-block;
   position: relative;
 
-  ::after {
-    content: "";
-    position: absolute;
-    top: 0px;
-    background-color: rgb(250, 250, 250);
-  }
-
   @media (min-width: 1142px) {
     width: 290px;
     height: 598px;
     border-radius: 42px;
     box-shadow: rgb(0 0 0 / 18%) 0px 9px 17px 0px,
       rgb(0 0 0 / 8%) 0px -4px 6px 0px inset;
-
-    ::after {
-      width: 142px;
-      height: 20px;
-      left: 74px;
-      border-radius: 16px;
-    }
+    margin-right: 20px; // 수정 필요
   }
 
   @media (max-width: 1141px) {
@@ -35,13 +22,6 @@ const PhoneFrame = styled.div`
     border-radius: 16px;
     box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
       rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
-
-    ::after {
-      width: 54px;
-      height: 8px;
-      left: 29px;
-      border-radius: 6px;
-    }
   }
 `;
 
@@ -69,17 +49,14 @@ const PhoneScreen = styled.div`
   }
 `;
 
-export default function Phone({ props }) {
-  if (!props) return;
-  const { src } = props;
-
+export default function Phone({ src }) {
   return (
-    <PhoneFrame src={src}>
-      <PhoneScreen></PhoneScreen>
+    <PhoneFrame>
+      <PhoneScreen src={src}></PhoneScreen>
     </PhoneFrame>
   );
 }
 
 Phone.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.string.isRequired,
 };

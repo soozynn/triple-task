@@ -34,13 +34,6 @@ const PhonesContainer = styled.div`
   position: relative;
   z-index: 0;
 
-  &:nth-child(2) {
-    background-color: rgb(250, 250, 250);
-    z-index: 1;
-    display: inline-block;
-    position: relative;
-  }
-
   @media (min-width: 1142px) {
     font-size: 17px;
     line-height: 30px;
@@ -55,6 +48,42 @@ const PhonesContainer = styled.div`
     line-height: 24px;
     margin: 50px 0px 0px;
     letter-spacing: -0.5px;
+
+    > * {
+      &:nth-child(1) {
+        width: 112px;
+        height: 230px;
+        border-radius: 16px;
+        box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
+          rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
+        background-color: rgb(250, 250, 250);
+        position: absolute;
+        inset: 15px auto auto 30px;
+      }
+
+      &:nth-child(2) {
+        width: 120px;
+        height: 246px;
+        border-radius: 18px;
+        box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
+          rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
+        background-color: rgb(250, 250, 250);
+        z-index: 1;
+        display: inline-block;
+        position: relative;
+      }
+
+      &:nth-child(3) {
+        width: 112px;
+        height: 230px;
+        border-radius: 16px;
+        box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
+          rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
+        background-color: rgb(250, 250, 250);
+        position: absolute;
+        inset: 15px 30px auto auto;
+      }
+    }
   }
 `;
 
