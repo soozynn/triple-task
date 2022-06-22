@@ -16,6 +16,16 @@ const MainSectionContainer = styled.div`
   margin: 0px auto;
   position: relative;
 
+  position: relative;
+  overflow: hidden;
+  background-image: inherit;
+  background-repeat: inherit;
+  background-attachment: inherit;
+  background-origin: inherit;
+  background-clip: inherit;
+  background-color: inherit;
+  background-size: cover;
+  background-position: center center;
   @media (max-width: 1141px) {
     max-width: 360px;
     height: 700px;
@@ -94,9 +104,7 @@ const BigPhoneFrameWrapper = styled.div`
 const BigPhoneFrame = styled.div`
   background-color: rgb(250, 250, 250);
   position: absolute;
-  /* inset: 318px auto -96px 50%; */
-  /* transform: translateX(-50%);
-  inset: 229px 0px auto auto; */
+  inset: 229px 0px auto auto;
 
   ::after {
     content: "";
@@ -104,22 +112,6 @@ const BigPhoneFrame = styled.div`
     top: 0px;
     background-color: rgb(250, 250, 250);
   }
-
-  /* @media (max-width: 1141px) {
-    width: 231px;
-    height: 476px;
-    border-radius: 34px;
-    box-shadow: rgb(0 0 0 / 18%) 0px 9px 17px 0px,
-      rgb(0 0 0 / 8%) 0px -4px 6px 0px inset;
-    inset: 318px auto -96px 50%;
-
-    ::after {
-      width: 113px;
-      height: 27px;
-      left: 59px;
-      border-radius: 13px;
-    }
-  } */
 
   @media (min-width: 1142px) {
     width: 330px;
@@ -143,15 +135,6 @@ const BigPhoneScreen = styled.div`
   background-repeat: no-repeat;
   position: absolute;
 
-  /* @media (max-width: 1141px) {
-    width: 209px;
-    height: 454px;
-    top: 11px;
-    left: 11px;
-    border-radius: 23px;
-    background-size: 209px 454px;
-  } */
-
   @media (min-width: 1142px) {
     width: 300px;
     height: 650px;
@@ -173,9 +156,8 @@ const SmallPhoneFrameWrapper = styled.div`
 const SmallPhoneFrame = styled.div`
   background-color: rgb(250, 250, 250);
   position: absolute;
-  /* inset: 318px auto -96px 50%; */
-  /* transform: translateX(-50%);
-  inset: 229px 0px auto auto; */
+  inset: 318px auto -96px 50%;
+  transform: translateX(-50%);
 
   ::after {
     content: "";
@@ -199,22 +181,6 @@ const SmallPhoneFrame = styled.div`
       border-radius: 13px;
     }
   }
-  /*
-  @media (min-width: 1142px) {
-    width: 330px;
-    height: 680px;
-    border-radius: 48px;
-    box-shadow: rgb(0 0 0 / 18%) 0px 13px 24px 0px,
-      rgb(0 0 0 / 8%) 0px -6px 9px 0px inset;
-    inset: 229px 0px auto auto;
-
-    ::after {
-      width: 162px;
-      height: 38px;
-      left: 84px;
-      border-radius: 18px;
-    }
-  } */
 `;
 
 const SmallPhoneScreen = styled.div`
@@ -230,15 +196,6 @@ const SmallPhoneScreen = styled.div`
     border-radius: 23px;
     background-size: 209px 454px;
   }
-  /*
-  @media (min-width: 1142px) {
-    width: 300px;
-    height: 650px;
-    top: 15px;
-    left: 15px;
-    border-radius: 33px;
-    background-size: 300px 650px;
-  } */
 `;
 
 export default function MainSection() {
