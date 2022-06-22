@@ -99,6 +99,7 @@ const Logo = styled.img`
 
 const IconsContainer = styled.div`
   position: absolute;
+  display: flex;
 
   * {
     margin-left: 5px;
