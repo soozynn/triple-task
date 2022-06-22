@@ -34,7 +34,7 @@ export default function CircleCityImage(props) {
   return (
     <CirclCityImageBackground
       src={src}
-      alt="city-image"
+      alt="cities by country"
       pcSize={pcSize}
       mobileSize={mobileSize}
     />

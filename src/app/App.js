@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "../components/Home";
 import MyPage from "../components/MyPage/index";
-import Login from "../components/Login";
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -42,7 +41,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/my-bookings" element={<MyPage />} />
-          <Route path="/login" element={<Login />} />
           {/* <Route element={<NotFound />} /> */}
         </Routes>
       </Router>
