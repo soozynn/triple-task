@@ -43,7 +43,7 @@ export default function Button(props) {
 }
 
 Button.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.string,
   src: PropTypes.string,
   text: PropTypes.string,
   location: PropTypes.string.isRequired,
