@@ -1,6 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import PropTypes from "prop-types";
 
 const MarketLinksContainer = styled.div`
   display: none;
@@ -38,19 +38,20 @@ const MarketLinksButton = styled.button`
 `;
 
 export default function Button({ margintTop }) {
-  const navigate = useNavigate();
-
-  const navigateMarketLinksButton = () => {
-    navigate(
-      "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web"
-    );
+  const handleClickButton = () => {
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.titicacacorp.triple&pid=intro_web";
   };
 
   return (
     <MarketLinksContainer margintTop={margintTop}>
-      <MarketLinksButton onClick={navigateMarketLinksButton}>
+      <MarketLinksButton onClick={handleClickButton}>
         앱 설치하기
       </MarketLinksButton>
     </MarketLinksContainer>
   );
 }
+
+Button.propTypes = {
+  margintTop: PropTypes.string,
+};

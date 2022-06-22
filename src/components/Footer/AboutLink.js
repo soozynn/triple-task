@@ -1,18 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const AboutContainer = styled(Link)`
+const AboutContainer = styled.div`
   color: var(--color-gray);
   text-decoration: none;
   margin: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 export default function AboutLink(props) {
   const { location, children } = props;
 
-  return <AboutContainer to={location}>{children}</AboutContainer>;
+  const handleClickAboutLink = () => {
+    window.open(location);
+  };
+
+  return (
+    <AboutContainer onClick={handleClickAboutLink}>{children}</AboutContainer>
+  );
 }
 
 AboutLink.propTypes = {
