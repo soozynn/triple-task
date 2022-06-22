@@ -7,7 +7,6 @@ import MainSection from "./MainSection/index";
 import AwardSection from "./AwardSection/index";
 import ReservationSection from "./ReservationSection/index";
 import CitySection from "./CitySection";
-import ItinerarySection from "./ItinerarySection/index";
 import LocationSection from "./LocationSection/index";
 import ReviewSection from "./ReviewSection/index";
 import FeatureSection from "./FeatureSection/index";
@@ -34,7 +33,6 @@ export default function Home() {
       <AwardSection />
       <ReservationSection />
       <CitySection />
-      <ItinerarySection />
       <LocationSection />
       <ReviewSection />
       <FeatureSection />
