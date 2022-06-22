@@ -163,6 +163,7 @@ export default function Footer() {
           </InformationWrapper>
         )}
 
+
         <WarningPhrase>
           (주) 트리플은 통신판매중개로서 통신판매의 당사자가 아니며 상품
           거래정보 및 거래등에 대해 책임을 지지 않습니다.
