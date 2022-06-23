@@ -4,8 +4,8 @@ import styled from "styled-components";
 import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
 import badgePlayStoreSrc from "../../../images/awardSection/badgePlayStore.png";
 import badgeAppleSrc from "../../../images/awardSection/badgeApple.png";
-import CountUpAnimation from "../../CountUpAnimation";
 import useFadeIn from "../../../hooks/useFadeIn";
+import CountUpAnimation from "../../CountUpAnimation";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
 
@@ -45,9 +45,9 @@ const ContentLogo = styled.div`
   color: rgba(58, 58, 58, 0.7);
   transform: translateY("10px");
 
-  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  /* opacity: ${(props) => (props.isVisible ? "1" : "0")};
   transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
-  transition: all 700ms ease-in-out 0ms;
+  transition: all 700ms ease-in-out 0ms; */
 
   @media (min-width: 1142px) {
     position: absolute;
