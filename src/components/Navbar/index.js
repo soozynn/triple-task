@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -14,6 +14,12 @@ const NavBackground = styled.nav`
   overflow: hidden;
   top: 0px;
   height: 50px;
+  position: ${(props) => props.showsNavbar || "fixed"};
+  display: flex;
+
+  @media (min-width: 1142px) {
+    height: 80px;
+  }
 
   /* opacity: 0;
     transition: all 400ms ease-in-out 0s;
@@ -27,7 +33,6 @@ const NavBackground = styled.nav`
 const NavContainer = styled.div`
   background-color: rgb(255, 255, 255);
   display: flex;
-  /* display: ${(props) => (props.isScrollDown ? "flex" : "none")}; */
   -webkit-box-align: center;
   align-items: center;
   border-bottom: 1px solid rgb(239, 239, 239);
@@ -51,6 +56,11 @@ const Logo = styled.img`
   display: block;
   width: 57px;
   height: 20px;
+
+  @media (min-width: 1142px) {
+    width: 68px;
+    height: 24px;
+  }
 `;
 
 const MyBookingsWrapper = styled.div`
@@ -65,24 +75,34 @@ const MyBookings = styled(Link)`
   color: rgba(58, 58, 58, 0.8);
   font-size: 14px;
   padding: 10px 8px;
+
+  @media (min-width: 1142px) {
+    font-size: 17px;
+    padding: 10px 14px;
+  }
 `;
 
 export default function Navbar() {
-  const [isScrollDown, setIsScrollDown] = useState(false);
+  const [showsNavbar, setShowsNavbar] = useState(false);
 
-  const handleScrollDown = () => {
-    if (window.scrollY >= 60) {
-      // clubSection이하로도 설정 필요
-      setIsScrollDown(true);
+  const updateScrollPosition = () => {
+    if (window.scrollY >= 100) {
+      setShowsNavbar(true);
     } else {
-      setIsScrollDown(false);
+      setShowsNavbar(false);
     }
   };
 
-  window.addEventListener("scroll", handleScrollDown);
+  useEffect(() => {
+    window.addEventListener("scroll", updateScrollPosition);
+
+    return () => {
+      window.removeEventListener("scroll", updateScrollPosition);
+    };
+  }, []);
 
   return (
-    <NavBackground props={isScrollDown}>
+    <NavBackground showsNavbar={showsNavbar}>
       <NavContainer>
         <LogoWrapper to="/">
           <Logo src={blackLogoSrc} />

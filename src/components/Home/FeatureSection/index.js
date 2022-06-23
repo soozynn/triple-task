@@ -99,6 +99,7 @@ export default function FeatureSection(props) {
     <ReservationBackground>
       <ReservationContainer>
         <CenterTitle title={title} subTitle={subTitle} />
+
         <PhonesContainer size={size}>
           <Phone src={firstScreenSrc} size={size} />
           <Phone src={secondScreenSrc} size={size} />

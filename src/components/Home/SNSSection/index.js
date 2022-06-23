@@ -135,6 +135,7 @@ export default function SNSSection() {
           <InstallButton margintTop={"30px"} />
         </ButtonWrapper>
       </SNSSectionContent>
+
       <Logo src={logoSrc} />
       <IconsContainer>
         <Icon

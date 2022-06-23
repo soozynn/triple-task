@@ -42,6 +42,10 @@ const ContentLogo = styled.div`
   text-align: center;
   color: rgba(58, 58, 58, 0.7);
 
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
+  transition: all 700ms ease-in-out 0ms;
+
   @media (min-width: 1142px) {
     position: absolute;
     top: 150px;
@@ -68,7 +72,6 @@ const ContentArticles = styled.div`
   border: 0px;
   font: inherit;
   vertical-align: baseline;
-
   color: rgb(58, 58, 58);
 
   @media (min-width: 1142px) {
@@ -99,6 +102,7 @@ export default function AwardSection(props) {
     <AwardSectionBackground>
       <AwardSectionContainer>
         <ContentLogo>2021년 12월 기준</ContentLogo>
+
         <ContentArticles>
           <AwardTitle
             title={
@@ -131,6 +135,7 @@ export default function AwardSection(props) {
             }
           />
         </ContentArticles>
+
         <AwardItemsContainer>
           <AwardItem
             src={badgePlayStoreSrc}

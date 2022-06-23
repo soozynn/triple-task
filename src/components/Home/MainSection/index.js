@@ -26,6 +26,7 @@ const MainSectionContainer = styled.div`
   background-color: inherit;
   background-size: cover;
   background-position: center center;
+
   @media (max-width: 1141px) {
     max-width: 360px;
     height: 700px;
@@ -210,12 +211,14 @@ export default function MainSection() {
           <SubTitle>예약부터 일정까지 앱 하나로 간편하게 준비하세요.</SubTitle>
           <InstallButton />
         </TitleContainer>
+
         <PhoneContainer>
           <BigPhoneFrameWrapper>
             <BigPhoneFrame>
               <BigPhoneScreen />
             </BigPhoneFrame>
           </BigPhoneFrameWrapper>
+
           <SmallPhoneFrameWrapper>
             <SmallPhoneFrame>
               <SmallPhoneScreen />

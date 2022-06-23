@@ -67,6 +67,7 @@ export default function Header() {
       <Link to="/">
         <Logo src={logoSrc} />
       </Link>
+
       <MyBookingsWrapper>
         <MyBookings to="/my-bookings">내 예약</MyBookings>
       </MyBookingsWrapper>

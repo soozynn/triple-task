@@ -29,7 +29,7 @@ export default function Icon(props) {
 
   return (
     <IconLink onClick={handleClickIcon}>
-      <IconImage src={src} alt="sns-icon" />
+      <IconImage src={src} alt="sns icon" />
     </IconLink>
   );
 }

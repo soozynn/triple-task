@@ -16,7 +16,6 @@ import FeatureSection from "./FeatureSection/index";
 import CitySection from "./CitySection";
 import LocationSection from "./LocationSection/index";
 import ReviewSection from "./ReviewSection/index";
-import ClubSection from "./ClubSection/index";
 import SNSSection from "./SNSSection/index";
 import Footer from "../Footer/index";
 
@@ -79,7 +78,6 @@ export default function Home() {
         thirdScreenSrc={phoneScreen07Src}
         size
       />
-      <ClubSection />
       <SNSSection />
       <Footer />
       <UnderFooter />
