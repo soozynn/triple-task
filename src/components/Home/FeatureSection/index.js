@@ -28,57 +28,57 @@ const ReservationContainer = styled.div`
 
 const PhonesContainer = styled.div`
   display: block;
-  text-align: center;
   position: relative;
+  text-align: center;
   z-index: 0;
 
   @media (min-width: 1142px) {
+    width: 100%;
+    position: absolute;
+    bottom: ${(props) => (props.size ? "80px" : "-52px")};
     font-size: 17px;
     line-height: 30px;
     letter-spacing: -0.283333px;
-    position: absolute;
-    bottom: ${(props) => (props.size ? "80px" : "-52px")}; // 수정 필요
-    width: 100%;
   }
 
   @media (max-width: 1141px) {
+    margin: 50px 0px 0px;
     font-size: 14px;
     line-height: 24px;
-    margin: 50px 0px 0px;
     letter-spacing: -0.5px;
 
     > * {
       &:nth-child(1) {
         width: 112px;
         height: 230px;
+        position: absolute;
         border-radius: 16px;
         box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
           rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
         background-color: rgb(250, 250, 250);
-        position: absolute;
         inset: 15px auto auto 30px;
       }
 
       &:nth-child(2) {
         width: 120px;
         height: 246px;
+        display: inline-block;
+        position: relative;
         border-radius: 18px;
         box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
           rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
         background-color: rgb(250, 250, 250);
         z-index: 1;
-        display: inline-block;
-        position: relative;
       }
 
       &:nth-child(3) {
         width: 112px;
         height: 230px;
+        position: absolute;
         border-radius: 16px;
         box-shadow: rgb(0 0 0 / 18%) 0px 4px 7px 0px,
           rgb(0 0 0 / 8%) 0px -2px 3px 0px inset;
         background-color: rgb(250, 250, 250);
-        position: absolute;
         inset: 15px 30px auto auto;
       }
     }
@@ -116,5 +116,5 @@ FeatureSection.propTypes = {
   firstScreenSrc: PropTypes.string.isRequired,
   secondScreenSrc: PropTypes.string.isRequired,
   thirdScreenSrc: PropTypes.string.isRequired,
-  size: PropTypes.bool,
+  size: PropTypes.string,
 };

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const AboutContainer = styled.div`
+  margin: 6px;
   color: var(--color-gray);
   text-decoration: none;
-  margin: 6px;
 
   &:hover {
     cursor: pointer;

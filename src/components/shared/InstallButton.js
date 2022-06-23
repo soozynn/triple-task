@@ -12,23 +12,22 @@ const MarketLinksContainer = styled.div`
 `;
 
 const MarketLinksButton = styled.button`
-  box-sizing: border-box;
-  float: none;
-
+  width: 180px;
+  height: 50px;
   position: relative;
   display: inline-block;
-  text-decoration: none;
-  text-align: center;
+  box-sizing: border-box;
   box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgb(255, 255, 255);
-  font-weight: bold;
-  transition: all 200ms ease-in-out 0s;
-  width: 180px;
-  height: 50px;
-  line-height: 50px;
   border-radius: 25px;
+  float: none;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  line-height: 50px;
   color: rgb(255, 255, 255);
+  transition: all 200ms ease-in-out 0s;
 
   &:hover {
     background-color: rgb(255, 255, 255);

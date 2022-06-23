@@ -4,16 +4,16 @@ import styled from "styled-components";
 
 import logoSrc from "../../../images/logo.png";
 
-const HeaderContainer = styled.nav`
+const HeaderContainer = styled.header`
+  right: 0px;
+  left: 0px;
   display: flex;
+  justify-content: space-between;
+  position: absolute;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
   z-index: 1;
-  position: absolute;
-  right: 0px;
-  left: 0px;
 
   @media (max-width: 1141px) {
     padding: 42px 14px 0px;

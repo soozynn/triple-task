@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import badgeTripleSrc from "../../../images/badgeTriple.png";
-import badgePlayStoreSrc from "../../../images/badgePlayStore.png";
-import badgeAppleSrc from "../../../images/badgeApple.png";
+import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
+import badgePlayStoreSrc from "../../../images/awardSection/badgePlayStore.png";
+import badgeAppleSrc from "../../../images/awardSection/badgeApple.png";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
 
@@ -42,9 +42,9 @@ const ContentLogo = styled.div`
   text-align: center;
   color: rgba(58, 58, 58, 0.7);
 
-  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  /* opacity: ${(props) => (props.isVisible ? "1" : "0")};
   transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
-  transition: all 700ms ease-in-out 0ms;
+  transition: all 700ms ease-in-out 0ms; */
 
   @media (min-width: 1142px) {
     position: absolute;

@@ -21,8 +21,8 @@ const UnderFooter = styled.div`
   display: none;
 
   @media (max-width: 1141px) {
-    display: block;
     height: 54px;
+    display: block;
     background-color: rgba(46, 46, 46, 0.5);
   }
 `;
@@ -72,7 +72,7 @@ export default function Home() {
         firstScreenSrc={phoneScreen05Src}
         secondScreenSrc={phoneScreen06Src}
         thirdScreenSrc={phoneScreen07Src}
-        size
+        size="true"
       />
       <SNSSection />
       <Footer />

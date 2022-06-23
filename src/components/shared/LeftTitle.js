@@ -32,18 +32,18 @@ const LeftSubTitle = styled.div`
   color: rgb(58, 58, 58);
 
   @media (min-width: 1142px) {
+    margin: 20px 0px 0px;
     font-size: 17px;
     line-height: 1.76;
     letter-spacing: -0.3px;
-    margin: 20px 0px 0px;
   }
 
   @media (max-width: 1141px) {
+    margin: 12px 0px 0px;
     font-size: 16px;
     line-height: 1.71;
     letter-spacing: -0.5px;
     text-align: center;
-    margin: 12px 0px 0px;
   }
 `;
 

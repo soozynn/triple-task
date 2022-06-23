@@ -2,43 +2,42 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import blackLogoSrc from "../../images/logoDark.svg";
+import blackLogoSrc from "../../images/navbar/logoDark.svg";
 
 const NavBackground = styled.nav`
-  /* fade-enter-done {
-    opacity: 1;
-    transform: translateY(0%);
-  } */
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  display: block;
+  position: fixed;
+  float: none;
+  opacity: ${(props) => (props.showsNavbar ? 1 : 0)};
+  box-sizing: border-box;
+  z-index: 3;
+  transform: translateY(${(props) => (props.showsNavbar ? "-100%" : "0%")});
+  transition: all 400ms ease-in-out 0s;
+`;
 
-  transition: height 250ms ease 0s;
-  overflow: hidden;
+const NavContainer = styled.div`
   top: 0px;
   height: 50px;
-  position: ${(props) => props.showsNavbar || "fixed"};
-  display: flex;
+  overflow: hidden;
+  transition: height 250ms ease 0s;
 
   @media (min-width: 1142px) {
     height: 80px;
   }
-
-  /* opacity: 0;
-    transition: all 400ms ease-in-out 0s;
-    transform: translateY(-100%);
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    right: 0px; */
 `;
 
-const NavContainer = styled.div`
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  border-bottom: 1px solid rgb(239, 239, 239);
-  padding: 0px 6px;
+const NavWrapper = styled.div`
   height: 50px;
+  padding: 0px 6px;
+  display: flex;
+  align-items: center;
+  -webkit-box-align: center;
+  background-color: rgb(255, 255, 255);
   box-sizing: border-box;
+  border-bottom: 1px solid rgb(239, 239, 239);
 
   @media (min-width: 1142px) {
     height: 80px;
@@ -53,9 +52,9 @@ const LogoWrapper = styled(Link)`
 `;
 
 const Logo = styled.img`
-  display: block;
   width: 57px;
   height: 20px;
+  display: block;
 
   @media (min-width: 1142px) {
     width: 68px;
@@ -68,24 +67,24 @@ const MyBookingsWrapper = styled.div`
 `;
 
 const MyBookings = styled(Link)`
-  text-decoration: none;
+  padding: 10px 8px;
   display: inline-flex;
-  -webkit-box-align: center;
   align-items: center;
+  -webkit-box-align: center;
   color: rgba(58, 58, 58, 0.8);
   font-size: 14px;
-  padding: 10px 8px;
+  text-decoration: none;
 
   @media (min-width: 1142px) {
-    font-size: 17px;
     padding: 10px 14px;
+    font-size: 17px;
   }
 `;
 
 export default function Navbar() {
   const [showsNavbar, setShowsNavbar] = useState(false);
 
-  const updateScrollPosition = () => {
+  const controlNavbar = () => {
     if (window.scrollY >= 100) {
       setShowsNavbar(true);
     } else {
@@ -94,22 +93,25 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", updateScrollPosition);
+    window.addEventListener("scroll", controlNavbar);
 
     return () => {
-      window.removeEventListener("scroll", updateScrollPosition);
+      window.removeEventListener("scroll", controlNavbar);
     };
   }, []);
 
   return (
-    <NavBackground showsNavbar={showsNavbar}>
-      <NavContainer>
-        <LogoWrapper to="/">
-          <Logo src={blackLogoSrc} />
-        </LogoWrapper>
-        <MyBookingsWrapper>
-          <MyBookings to="/my-bookings">내 예약</MyBookings>
-        </MyBookingsWrapper>
+    <NavBackground>
+      <NavContainer showsNavbar={showsNavbar}>
+        <NavWrapper>
+          <LogoWrapper to="/">
+            <Logo src={blackLogoSrc} />
+          </LogoWrapper>
+
+          <MyBookingsWrapper>
+            <MyBookings to="/my-bookings">내 예약</MyBookings>
+          </MyBookingsWrapper>
+        </NavWrapper>
       </NavContainer>
     </NavBackground>
   );

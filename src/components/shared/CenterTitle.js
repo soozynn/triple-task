@@ -3,20 +3,20 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const CenterTitleContainer = styled.h2`
+  width: 100%;
+  margin: 0px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -1px;
   color: rgb(58, 58, 58);
-  width: 100%;
   text-align: center;
-  margin: 0px;
+  letter-spacing: -1px;
 
   @media (min-width: 1142px) {
+    top: 150px;
     position: absolute;
     font-size: 52px;
     line-height: 68px;
-    top: 150px;
   }
 
   @media (max-width: 1141px) {
@@ -28,25 +28,25 @@ const CenterTitleContainer = styled.h2`
 `;
 
 const CenterSubTitle = styled.div`
+  margin: 0px;
   font-weight: normal;
   font-style: normal;
   color: rgb(58, 58, 58);
   text-align: center;
-  margin: 0px;
 
   @media (min-width: 1142px) {
+    top: 306px;
+    width: 100%;
+    position: absolute;
     font-size: 17px;
     line-height: 30px;
     letter-spacing: -0.283333px;
-    position: absolute;
-    top: 306px;
-    width: 100%;
   }
 
   @media (max-width: 1141px) {
+    margin: 15px 0px 0px;
     font-size: 16px;
     line-height: 24px;
-    margin: 15px 0px 0px;
     letter-spacing: -0.5px;
   }
 `;
