@@ -59,17 +59,83 @@ export default function CitySection() {
           }
         />
 
-        {/* <CircleCityImage src={newyorkImageSrc} width="160" height="160" top="343" right="438" />
-        <CircleCityImage src={vladivostokImageSrc} width="140" height="140" top="140" right="" />
-        <CircleCityImage src={busanImageSrc} width="" height="" top="" right="" />
-        <CircleCityImage src={sydneyImageSrc} width="" height="" top="" right="" />
-        <CircleCityImage src={gangreungImageSrc} width="" height="" top="" right="" />
-        <CircleCityImage src={jejuImageSrc} width="" height="" top="" right="" />
-        <CircleCityImage src={laosImageSrc}  width="" height="" top="" right=""/>
-        <CircleCityImage src={parisImageSrc} width="" height="" top="" right=""/>
-        <CircleCityImage src={londonImageSrc} width="" height="" top="" right=""/>
-        <CircleCityImage src={budapestImageSrc} width="" height="" top="" right=""/>
-        <CircleCityImage src={melbourneImageSrc} width="" height="" top="" right=""/> */}
+        <CircleCityImage
+          src={newyorkImageSrc}
+          width="160px"
+          height="160px"
+          top="343px"
+          right="438px"
+        />
+        <CircleCityImage
+          src={vladivostokImageSrc}
+          width="140px"
+          height="140px"
+          top="182px"
+          right="315px"
+        />
+        <CircleCityImage
+          src={busanImageSrc}
+          width="200px"
+          height="200px"
+          top="151px"
+          right="51px"
+        />
+        <CircleCityImage
+          src={sydneyImageSrc}
+          width="150px"
+          height="150px"
+          top="173px"
+          right="-142px"
+        />
+        <CircleCityImage
+          src={gangreungImageSrc}
+          width="200px"
+          height="200px"
+          top="346px"
+          right="204px"
+        />
+        <CircleCityImage
+          src={jejuImageSrc}
+          width="220px"
+          height="220px"
+          top="368px"
+          right="-67px"
+        />
+        <CircleCityImage
+          src={laosImageSrc}
+          width="130px"
+          height="130px"
+          top="523px"
+          right="554px"
+        />
+        <CircleCityImage
+          src={parisImageSrc}
+          width="170px"
+          height="170px"
+          top="561px"
+          right="339px"
+        />
+        <CircleCityImage
+          src={londonImageSrc}
+          width="200px"
+          height="200px"
+          top="577px"
+          right="90px"
+        />
+        <CircleCityImage
+          src={budapestImageSrc}
+          width="170px"
+          height="170px"
+          top="568px"
+          right="-200px"
+        />
+        <CircleCityImage
+          src={melbourneImageSrc}
+          width="120px"
+          height="120px"
+          top="717px"
+          right="-42px"
+        />
       </CitySectionContainer>
     </CitySectionBackground>
   );

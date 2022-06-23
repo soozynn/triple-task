@@ -3,6 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const CirclCityImageBackground = styled.img`
+  position: absolute;
   font-family: sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -11,38 +12,32 @@ const CirclCityImageBackground = styled.img`
   color: rgb(58, 58, 58);
 
   @media (min-width: 1142px) {
-    /* width: 200px;
-    height: 200px;
-    top: 346px;
-    right: 204px; */
-  }
-
-  @media (max-width: 1141px) {
-    /* width: 75px;
-    height: 75px;
-    top: 301px;
-    left: 50%;
-    margin-left: 100px; */
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    top: ${(props) => props.top};
+    right: ${(props) => props.right};
   }
 `;
 
 export default function CircleCityImage(props) {
-  const { src, pcSize, mobileSize } = props;
-  const { pcWidth, pcHeight, pcTop, pcRight } = pcSize;
-  const { mobileWidth, mobileHeight, mobileTop, mobileRight } = mobileSize;
+  const { src, width, height, top, right } = props;
 
   return (
     <CirclCityImageBackground
       src={src}
       alt="cities by country"
-      pcSize={pcSize}
-      mobileSize={mobileSize}
+      width={width}
+      height={height}
+      top={top}
+      right={right}
     />
   );
 }
 
 CircleCityImage.propTypes = {
   src: PropTypes.string.isRequired,
-  pcSize: PropTypes.objectOf,
-  mobileSize: PropTypes.objectOf,
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  top: PropTypes.string.isRequired,
+  right: PropTypes.string.isRequired,
 };
