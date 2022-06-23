@@ -45,6 +45,10 @@ const ContentLogo = styled.div`
   color: rgba(58, 58, 58, 0.7);
   transform: translateY("10px");
 
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
+  transition: all 700ms ease-in-out 0ms;
+
   @media (min-width: 1142px) {
     position: absolute;
     top: 150px;
