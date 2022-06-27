@@ -15,8 +15,6 @@ npm start
 
 http://localhost:3000/ 을 실행시켜주세요.
 
-<<<<<<< HEAD
-
 # 최종 결과
 
 <img width="80%" alt="result" src="README_assets/countUp.gif" />
@@ -45,3 +43,7 @@ http://localhost:3000/ 을 실행시켜주세요.
 ## About
 
 과제 요구 사항의 코드는 components 폴더 내 Home 내부에 있는 AwardSection입니다. 감사합니다.
+
+## 배포 사이트
+
+https://classy-griffin-0e88d5.netlify.app/
