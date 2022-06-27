@@ -14,6 +14,10 @@ npm start
 
 http://localhost:3000/ 을 실행시켜주세요.
 
+# 최종 결과
+
+<img width="80%" alt="result" src="README_assets/countUp.gif" />
+
 # 사용한 기술과 선택한 이유
 
 ```
