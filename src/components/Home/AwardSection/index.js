@@ -47,7 +47,7 @@ const ContentLogo = styled.div`
 
   /* opacity: ${(props) => (props.isVisible ? "1" : "0")};
   transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
-  transition: all 700ms ease-in-out 0ms; */
+  transition: all 700ms ease-in-out 0ms;
 
   @media (min-width: 1142px) {
     position: absolute;
