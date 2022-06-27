@@ -4,7 +4,7 @@ import styled from "styled-components";
 import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
 import badgePlayStoreSrc from "../../../images/awardSection/badgePlayStore.png";
 import badgeAppleSrc from "../../../images/awardSection/badgeApple.png";
-import useCountup from "../../../hooks/useCountup";
+import CountUpAnimation from "../../CountUpAnimation";
 import useFadeIn from "../../../hooks/useFadeIn";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
@@ -103,10 +103,6 @@ export default function AwardSection() {
   const fadeInTitle = useFadeIn(700, 300);
   const fadeInItems = useFadeIn(700, 500);
 
-  const userCount = useCountup(350);
-  const reviewCount = useCountup(21);
-  const storageCount = useCountup(650);
-
   return (
     <AwardSectionBackground>
       <AwardSectionContainer>
@@ -117,7 +113,10 @@ export default function AwardSection() {
             title={
               <>
                 <strong>
-                  <span>{userCount}</span>만 명
+                  <span>
+                    <CountUpAnimation>350</CountUpAnimation>
+                  </span>
+                  만 명
                 </strong>
                 의 여행자
               </>
@@ -127,7 +126,10 @@ export default function AwardSection() {
             title={
               <>
                 <strong>
-                  <span>{reviewCount}</span>만 개
+                  <span>
+                    <CountUpAnimation>21</CountUpAnimation>
+                  </span>
+                  만 개
                 </strong>
                 의 여행 리뷰
               </>
@@ -137,7 +139,10 @@ export default function AwardSection() {
             title={
               <>
                 <strong>
-                  <span>{storageCount}</span>만 개
+                  <span>
+                    <CountUpAnimation>650</CountUpAnimation>
+                  </span>
+                  만 개
                 </strong>
                 의 여행 일정
               </>
