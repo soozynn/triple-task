@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
-export default function useCountup(props) {
-  const { number } = props;
-
+export default function useCountup({ number }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {

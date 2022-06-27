@@ -5,6 +5,7 @@ import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
 import badgePlayStoreSrc from "../../../images/awardSection/badgePlayStore.png";
 import badgeAppleSrc from "../../../images/awardSection/badgeApple.png";
 import useCountup from "../../../hooks/useCountup";
+import useFadeIn from "../../../hooks/useFadeIn";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
 
@@ -42,9 +43,7 @@ const ContentLogo = styled.div`
   background-repeat: no-repeat;
   text-align: center;
   color: rgba(58, 58, 58, 0.7);
-  opacity: ${(props) => (props.isVisible ? "1" : "0")};
-  transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
-  transition: all 700ms ease-in-out 0ms;
+  transform: translateY("10px");
 
   @media (min-width: 1142px) {
     position: absolute;
@@ -73,6 +72,7 @@ const ContentArticles = styled.div`
   font: inherit;
   vertical-align: baseline;
   color: rgb(58, 58, 58);
+  transform: translateY("10px");
 
   @media (min-width: 1142px) {
     margin-left: 623px;
@@ -86,6 +86,7 @@ const ContentArticles = styled.div`
 
 const AwardItemsContainer = styled.div`
   white-space: nowrap;
+  transform: translateY("10px");
 
   @media (min-width: 1142px) {
     margin: 50px 0px 140px 623px;
@@ -98,17 +99,20 @@ const AwardItemsContainer = styled.div`
 `;
 
 export default function AwardSection() {
-  const fadeInAwardItems = useFadeIn(700, 100);
-  const userCount = useCountUp(350);
-  const reviewCount = useCountUp(21);
-  const storageCount = useCountUp(650);
+  const fadeInILogo = useFadeIn(700, 0);
+  const fadeInTitle = useFadeIn(700, 300);
+  const fadeInItems = useFadeIn(700, 500);
+
+  const userCount = useCountup(350);
+  const reviewCount = useCountup(21);
+  const storageCount = useCountup(650);
 
   return (
     <AwardSectionBackground>
       <AwardSectionContainer>
-        <ContentLogo>2021년 12월 기준</ContentLogo>
+        <ContentLogo {...fadeInILogo}>2021년 12월 기준</ContentLogo>
 
-        <ContentArticles>
+        <ContentArticles {...fadeInTitle}>
           <AwardTitle
             title={
               <>
@@ -141,7 +145,7 @@ export default function AwardSection() {
           />
         </ContentArticles>
 
-        <AwardItemsContainer {...fadeInAwardItems}>
+        <AwardItemsContainer {...fadeInItems}>
           <AwardItem
             src={badgePlayStoreSrc}
             title={
