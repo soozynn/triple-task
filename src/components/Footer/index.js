@@ -14,9 +14,9 @@ const FooterBackground = styled.footer`
 const FooterContainer = styled.div`
   min-width: 280px;
   max-width: 768px;
-  padding: 30px 30px 40px;
   margin-left: auto;
   margin-right: auto;
+  padding: 30px 30px 40px;
   box-sizing: border-box;
   float: none;
 `;

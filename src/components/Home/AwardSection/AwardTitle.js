@@ -6,15 +6,15 @@ const AwardTitleContainer = styled.div`
   color: var(--color-basic);
 
   @media (min-width: 1142px) {
+    margin-bottom: 20px;
     font-size: 36px;
     letter-spacing: -1px;
-    margin-bottom: 20px;
   }
 
   @media (max-width: 1141px) {
+    margin-bottom: 10px;
     font-size: 20px;
     letter-spacing: -0.5px;
-    margin-bottom: 10px;
   }
 
   strong {

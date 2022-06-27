@@ -60,7 +60,6 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/my-bookings" element={<MyPage />} />
-          {/* <Route element={<NotFound />} /> */}
         </Routes>
       </Router>
     </>

@@ -12,8 +12,8 @@ const ReservationBackground = styled.div`
 `;
 
 const ReservationContainer = styled.div`
-  margin: 0px auto;
   position: relative;
+  margin: 0px auto;
 
   @media (min-width: 1142px) {
     width: 1040px;
@@ -34,8 +34,8 @@ const PhonesContainer = styled.div`
 
   @media (min-width: 1142px) {
     width: 100%;
-    position: absolute;
     bottom: ${(props) => (props.size ? "80px" : "-52px")};
+    position: absolute;
     font-size: 17px;
     line-height: 30px;
     letter-spacing: -0.283333px;

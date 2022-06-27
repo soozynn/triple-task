@@ -67,9 +67,9 @@ const MyBookingsWrapper = styled.div`
 `;
 
 const MyBookings = styled(Link)`
-  padding: 10px 8px;
   display: inline-flex;
   align-items: center;
+  padding: 10px 8px;
   -webkit-box-align: center;
   color: rgba(58, 58, 58, 0.8);
   font-size: 14px;

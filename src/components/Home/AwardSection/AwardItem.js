@@ -12,8 +12,8 @@ const AwardItemContainer = styled.div`
 
   @media (min-width: 1142px) {
     height: 54px;
-    padding: 5px 0px 5px 62px;
     margin-right: 39px;
+    padding: 5px 0px 5px 62px;
     background-size: 54px 54px;
     font-size: 14px;
     line-height: 22px;

@@ -50,8 +50,8 @@ const ContentLogo = styled.div`
     top: 150px;
     width: 400px;
     height: 338px;
-    background-size: 400px 338px;
     padding-top: 280px;
+    background-size: 400px 338px;
     font-size: 15px;
   }
 
@@ -59,8 +59,8 @@ const ContentLogo = styled.div`
     width: 200px;
     height: 169px;
     margin: 80px auto 20px;
-    background-size: 200px 169px;
     padding-top: 137px;
+    background-size: 200px 169px;
     font-size: 10px;
   }
 `;

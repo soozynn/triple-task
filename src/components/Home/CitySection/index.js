@@ -22,8 +22,8 @@ const CitySectionBackground = styled.div`
 `;
 
 const CitySectionContainer = styled.div`
-  margin: 0px auto;
   position: relative;
+  margin: 0px auto;
 
   @media (min-width: 1142px) {
     width: 1040px;
