@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 import logoSrc from "../../../images/logo.png";
-import facebookIcon from "../../../images/facebook.png";
-import instagramIcon from "../../../images/instagram.png";
-import blogIcon from "../../../images/blog.png";
-import brunchIcon from "../../../images/brunch.png";
+import facebookIcon from "../../../images/snsSection/facebook.png";
+import instagramIcon from "../../../images/snsSection/instagram.png";
+import blogIcon from "../../../images/snsSection/blog.png";
+import brunchIcon from "../../../images/snsSection/brunch.png";
 import InstallButton from "../../shared/InstallButton";
 import Icon from "./Icon";
 
@@ -31,10 +31,10 @@ const SNSSectionContent = styled.div`
 `;
 
 const Title = styled.h2`
+  margin: 0px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  margin: 0px;
   color: rgba(255, 255, 255, 0.96);
   text-align: center;
 
@@ -54,11 +54,11 @@ const BoldText = styled.strong`
 `;
 
 const SubTitle = styled.div`
+  margin: 10px 0px 0px;
   font-weight: normal;
   font-style: normal;
-  letter-spacing: -0.283333px;
   color: rgba(255, 255, 255, 0.5);
-  margin: 10px 0px 0px;
+  letter-spacing: -0.283333px;
 
   @media (min-width: 1142px) {
     font-size: 17px;
@@ -135,6 +135,7 @@ export default function SNSSection() {
           <InstallButton margintTop={"30px"} />
         </ButtonWrapper>
       </SNSSectionContent>
+
       <Logo src={logoSrc} />
       <IconsContainer>
         <Icon

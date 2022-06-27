@@ -14,9 +14,6 @@ import MainSection from "./MainSection/index";
 import AwardSection from "./AwardSection/index";
 import FeatureSection from "./FeatureSection/index";
 import CitySection from "./CitySection";
-import LocationSection from "./LocationSection/index";
-import ReviewSection from "./ReviewSection/index";
-import ClubSection from "./ClubSection/index";
 import SNSSection from "./SNSSection/index";
 import Footer from "../Footer/index";
 
@@ -24,8 +21,8 @@ const UnderFooter = styled.div`
   display: none;
 
   @media (max-width: 1141px) {
-    display: block;
     height: 54px;
+    display: block;
     background-color: rgba(46, 46, 46, 0.5);
   }
 `;
@@ -57,8 +54,6 @@ export default function Home() {
         thirdScreenSrc={phoneScreen04Src}
       />
       <CitySection />
-      <LocationSection />
-      <ReviewSection />
       <FeatureSection
         title={
           <>
@@ -77,9 +72,8 @@ export default function Home() {
         firstScreenSrc={phoneScreen05Src}
         secondScreenSrc={phoneScreen06Src}
         thirdScreenSrc={phoneScreen07Src}
-        size
+        size="true"
       />
-      <ClubSection />
       <SNSSection />
       <Footer />
       <UnderFooter />

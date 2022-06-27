@@ -8,7 +8,7 @@ const AwardTitleContainer = styled.div`
   @media (min-width: 1142px) {
     font-size: 36px;
     letter-spacing: -1px;
-    margin-bottom: 14px;
+    margin-bottom: 20px;
   }
 
   @media (max-width: 1141px) {

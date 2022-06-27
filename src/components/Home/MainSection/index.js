@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import mainBackgroundSrc from "../../../images/mainBackground.png";
-import phoneScreen01Src from "../../../images/phoneScreen01.png";
+import mainBackgroundSrc from "../../../images/mainSection/mainBackground.png";
+import phoneScreen01Src from "../../../images/mainSection/phoneScreen01.png";
 import InstallButton from "../../shared/InstallButton";
 
 const MainBackground = styled.div`
@@ -15,8 +15,6 @@ const MainBackground = styled.div`
 const MainSectionContainer = styled.div`
   margin: 0px auto;
   position: relative;
-
-  position: relative;
   overflow: hidden;
   background-image: inherit;
   background-repeat: inherit;
@@ -26,6 +24,7 @@ const MainSectionContainer = styled.div`
   background-color: inherit;
   background-size: cover;
   background-position: center center;
+
   @media (max-width: 1141px) {
     max-width: 360px;
     height: 700px;
@@ -38,8 +37,8 @@ const MainSectionContainer = styled.div`
 `;
 
 const TitleContainer = styled.div`
-  position: absolute;
   width: 100%;
+  position: absolute;
 
   @media (max-width: 1141px) {
     top: 120px;
@@ -52,9 +51,9 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: bold;
   margin: 0px 0px 0px -4px;
   color: rgb(255, 255, 255);
+  font-weight: bold;
   transition-duration: 600ms;
   transition-delay: 0ms;
 
@@ -72,16 +71,16 @@ const Title = styled.h1`
 `;
 
 const SubTitle = styled.p`
-  letter-spacing: 0px;
   color: rgb(255, 255, 255);
   font-weight: 500;
+  letter-spacing: 0px;
   transition-duration: 900ms;
   transition-delay: 0ms;
 
   @media (max-width: 1141px) {
+    text-align: center;
     font-size: 16px;
     line-height: 1.71;
-    text-align: center;
     white-space: pre;
   }
 
@@ -102,14 +101,14 @@ const BigPhoneFrameWrapper = styled.div`
 `;
 
 const BigPhoneFrame = styled.div`
-  background-color: rgb(250, 250, 250);
   position: absolute;
+  background-color: rgb(250, 250, 250);
   inset: 229px 0px auto auto;
 
   ::after {
     content: "";
-    position: absolute;
     top: 0px;
+    position: absolute;
     background-color: rgb(250, 250, 250);
   }
 
@@ -131,9 +130,9 @@ const BigPhoneFrame = styled.div`
 `;
 
 const BigPhoneScreen = styled.div`
+  position: absolute;
   background-image: url(${phoneScreen01Src});
   background-repeat: no-repeat;
-  position: absolute;
 
   @media (min-width: 1142px) {
     width: 300px;
@@ -154,8 +153,8 @@ const SmallPhoneFrameWrapper = styled.div`
 `;
 
 const SmallPhoneFrame = styled.div`
-  background-color: rgb(250, 250, 250);
   position: absolute;
+  background-color: rgb(250, 250, 250);
   inset: 318px auto -96px 50%;
   transform: translateX(-50%);
 
@@ -184,9 +183,9 @@ const SmallPhoneFrame = styled.div`
 `;
 
 const SmallPhoneScreen = styled.div`
+  position: absolute;
   background-image: url(${phoneScreen01Src});
   background-repeat: no-repeat;
-  position: absolute;
 
   @media (max-width: 1141px) {
     width: 209px;
@@ -210,12 +209,14 @@ export default function MainSection() {
           <SubTitle>예약부터 일정까지 앱 하나로 간편하게 준비하세요.</SubTitle>
           <InstallButton />
         </TitleContainer>
+
         <PhoneContainer>
           <BigPhoneFrameWrapper>
             <BigPhoneFrame>
               <BigPhoneScreen />
             </BigPhoneFrame>
           </BigPhoneFrameWrapper>
+
           <SmallPhoneFrameWrapper>
             <SmallPhoneFrame>
               <SmallPhoneScreen />

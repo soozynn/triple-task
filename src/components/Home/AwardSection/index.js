@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import badgeTripleSrc from "../../../images/badgeTriple.png";
-import badgePlayStoreSrc from "../../../images/badgePlayStore.png";
-import badgeAppleSrc from "../../../images/badgeApple.png";
+import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
+import badgePlayStoreSrc from "../../../images/awardSection/badgePlayStore.png";
+import badgeAppleSrc from "../../../images/awardSection/badgeApple.png";
+import useCountup from "../../../hooks/useCountup";
 import AwardItem from "./AwardItem";
 import AwardTitle from "./AwardTitle";
 
@@ -41,6 +42,9 @@ const ContentLogo = styled.div`
   background-repeat: no-repeat;
   text-align: center;
   color: rgba(58, 58, 58, 0.7);
+  opacity: ${(props) => (props.isVisible ? "1" : "0")};
+  transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
+  transition: all 700ms ease-in-out 0ms;
 
   @media (min-width: 1142px) {
     position: absolute;
@@ -68,7 +72,6 @@ const ContentArticles = styled.div`
   border: 0px;
   font: inherit;
   vertical-align: baseline;
-
   color: rgb(58, 58, 58);
 
   @media (min-width: 1142px) {
@@ -94,17 +97,23 @@ const AwardItemsContainer = styled.div`
   }
 `;
 
-export default function AwardSection(props) {
+export default function AwardSection() {
+  const fadeInAwardItems = useFadeIn(700, 100);
+  const userCount = useCountUp(350);
+  const reviewCount = useCountUp(21);
+  const storageCount = useCountUp(650);
+
   return (
     <AwardSectionBackground>
       <AwardSectionContainer>
         <ContentLogo>2021년 12월 기준</ContentLogo>
+
         <ContentArticles>
           <AwardTitle
             title={
               <>
                 <strong>
-                  <span>700</span>만 명
+                  <span>{userCount}</span>만 명
                 </strong>
                 의 여행자
               </>
@@ -114,7 +123,7 @@ export default function AwardSection(props) {
             title={
               <>
                 <strong>
-                  <span>100</span>만 개
+                  <span>{reviewCount}</span>만 개
                 </strong>
                 의 여행 리뷰
               </>
@@ -124,14 +133,15 @@ export default function AwardSection(props) {
             title={
               <>
                 <strong>
-                  <span>470</span>만 개
+                  <span>{storageCount}</span>만 개
                 </strong>
                 의 여행 일정
               </>
             }
           />
         </ContentArticles>
-        <AwardItemsContainer>
+
+        <AwardItemsContainer {...fadeInAwardItems}>
           <AwardItem
             src={badgePlayStoreSrc}
             title={

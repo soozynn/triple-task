@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-import underArrowSrc from "../../images/underArrow.png";
-import downloadIconSrc from "../../images/download.png";
+import underArrowSrc from "../../images/footer/underArrow.png";
+import downloadIconSrc from "../../images/footer/download.png";
 import Button from "./Button";
 import AboutLink from "./AboutLink";
 
@@ -12,38 +12,37 @@ const FooterBackground = styled.footer`
 `;
 
 const FooterContainer = styled.div`
-  box-sizing: border-box;
-  float: none;
   min-width: 280px;
   max-width: 768px;
   padding: 30px 30px 40px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
+  float: none;
 `;
 
 const FirstRow = styled.div`
-  box-sizing: border-box;
-  float: none;
-
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
   align-items: center;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  float: none;
 `;
 
 const EntrepreneurText = styled.div`
   display: inline-block;
-  font-weight: 700;
   color: var(--color-gray500) !important;
+  font-weight: 700;
   font-size: 12px !important;
 `;
 
 const ArrowIcon = styled.img`
-  transform: translateY(2px);
-  margin-left: 3px;
   width: 15px;
   height: 15px;
+  margin-left: 3px;
+  transform: translateY(2px);
 
   &:hover {
     cursor: pointer;
@@ -61,33 +60,33 @@ const ButtonsContainer = styled.div`
 `;
 
 const InformationWrapper = styled.div`
+  margin: 5px 0px 0px;
   box-sizing: border-box;
   float: none;
-  margin: 5px 0px 0px;
 `;
 
 const Information = styled.div`
+  padding: 20px 0px 0px;
   box-sizing: border-box;
   overflow-wrap: break-word;
-  color: rgba(58, 58, 58, 0.5);
   float: none;
-  font-weight: 500;
   white-space: pre-line;
-  padding: 20px 0px 0px;
+  color: rgba(58, 58, 58, 0.5);
+  font-weight: 500;
   font-size: 11px;
   line-height: 17px;
   letter-spacing: 0px;
 `;
 
 const WarningPhrase = styled.div`
+  margin: 25px 0px 20px;
   box-sizing: border-box;
   overflow-wrap: break-word;
-  color: rgba(58, 58, 58, 0.5);
   float: none;
+  color: rgba(58, 58, 58, 0.5);
   font-weight: 500;
-  white-space: pre-line;
-  margin: 25px 0px 20px;
   font-size: 11px;
+  white-space: pre-line;
   line-height: 17px;
   letter-spacing: 0px;
 `;
@@ -97,7 +96,6 @@ const LinksContainer = styled.div`
   align-items: center;
   box-sizing: border-box;
   float: none;
-
   font-size: 11px;
   font-weight: bold;
   line-height: 20px;
@@ -162,7 +160,6 @@ export default function Footer() {
             </Information>
           </InformationWrapper>
         )}
-
 
         <WarningPhrase>
           (주) 트리플은 통신판매중개로서 통신판매의 당사자가 아니며 상품
