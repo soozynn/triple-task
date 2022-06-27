@@ -28,5 +28,5 @@ export default function CountUpAnimation({ children }) {
 }
 
 CountUpAnimation.propTypes = {
-  children: PropTypes.number.isRequired,
+  children: PropTypes.string.isRequired,
 };
