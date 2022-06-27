@@ -23,8 +23,8 @@ const AwardSectionBackground = styled.div`
 `;
 
 const AwardSectionContainer = styled.div`
-  margin: 0px auto;
   position: relative;
+  margin: 0px auto;
 
   @media (min-width: 1142px) {
     width: 1040px;
@@ -44,10 +44,6 @@ const ContentLogo = styled.div`
   text-align: center;
   color: rgba(58, 58, 58, 0.7);
   transform: translateY("10px");
-
-  /* opacity: ${(props) => (props.isVisible ? "1" : "0")};
-  transform: translateY(${(props) => (props.transY ? "0px" : "10px")});
-  transition: all 700ms ease-in-out 0ms;
 
   @media (min-width: 1142px) {
     position: absolute;
