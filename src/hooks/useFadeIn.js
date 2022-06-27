@@ -11,7 +11,7 @@ export default function useFadeIn(duration, delay) {
       current.style.transform = "translateY(0%)";
       current.style.transition = `all ${duration}ms ease-in-out ${delay}ms`;
     }
-  }, []);
+  }, [duration, delay]);
 
   return {
     ref: element,
