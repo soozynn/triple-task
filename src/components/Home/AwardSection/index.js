@@ -42,7 +42,7 @@ const ContentLogo = styled.div`
   background-image: url(${badgeTripleSrc});
   background-repeat: no-repeat;
   text-align: center;
-  color: rgba(58, 58, 58, 0.7);
+  color: var(--color-gray700);
   transform: translateY("10px");
 
   @media (min-width: 1142px) {
@@ -56,9 +56,9 @@ const ContentLogo = styled.div`
   }
 
   @media (max-width: 1141px) {
-    margin: 80px auto 20px;
     width: 200px;
     height: 169px;
+    margin: 80px auto 20px;
     background-size: 200px 169px;
     padding-top: 137px;
     font-size: 10px;
@@ -106,7 +106,9 @@ export default function AwardSection() {
   return (
     <AwardSectionBackground>
       <AwardSectionContainer>
-        <ContentLogo {...fadeInILogo}>2021년 12월 기준</ContentLogo>
+        <ContentLogo data-testid="application-award" {...fadeInILogo}>
+          2021년 12월 기준
+        </ContentLogo>
 
         <ContentArticles {...fadeInTitle}>
           <AwardTitle

@@ -28,6 +28,7 @@ http://localhost:3000/ 을 실행시켜주세요.
   "react-dom": "^18.2.0",
   "react-router-dom": "^6.3.0",
   "styled-components": "^5.3.5",
+  "jest-styled-components": "^7.0.8",
 ```
 
 - styled-components를 사용하게 된 이유

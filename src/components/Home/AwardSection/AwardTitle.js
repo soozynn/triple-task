@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const AwardTitleContainer = styled.div`
-  color: rgb(58, 58, 58);
+  color: var(--color-basic);
 
   @media (min-width: 1142px) {
     font-size: 36px;
@@ -25,7 +25,9 @@ const AwardTitleContainer = styled.div`
 export default function AwardTitle(props) {
   const { title } = props;
 
-  return <AwardTitleContainer>{title}</AwardTitleContainer>;
+  return (
+    <AwardTitleContainer data-testid="award-title">{title}</AwardTitleContainer>
+  );
 }
 
 AwardTitle.propTypes = {

@@ -7,10 +7,12 @@ import MyPage from "../components/MyPage/index";
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --color-gray: rgba(58,58,58,1);
-    --color-gray200: rgba(58,58,58,0.2);
-    --color-gray500: rgba(58,58,58,0.5);
-    --color-gray600: rgba(58,58,58,0.6);
+    --color-basic: rgb(58, 58, 58);
+    --color-gray: rgba(58, 58, 58, 1);
+    --color-gray200: rgba(58, 58, 58, 0.2);
+    --color-gray500: rgba(58, 58, 58, 0.5);
+    --color-gray600: rgba(58, 58, 58, 0.6);
+    --color-gray700: rgba(58, 58, 58, 0.7);
   }
 
   body, html {
