@@ -35,7 +35,11 @@ const AwardItemContainer = styled.div`
 export default function AwardItem(props) {
   const { src, title } = props;
 
-  return <AwardItemContainer src={src}>{title}</AwardItemContainer>;
+  return (
+    <AwardItemContainer data-testid="award-item" src={src}>
+      {title}
+    </AwardItemContainer>
+  );
 }
 
 AwardItem.propTypes = {
