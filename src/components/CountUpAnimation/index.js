@@ -24,7 +24,7 @@ export default function CountUpAnimation({ children }) {
         clearInterval(counter);
       }
     }, frameDuration);
-  }, []);
+  }, [children]);
 
   return Math.floor(count);
 }

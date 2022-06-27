@@ -98,8 +98,8 @@ const Logo = styled.img`
 `;
 
 const IconsContainer = styled.div`
-  position: absolute;
   display: flex;
+  position: absolute;
 
   * {
     margin-left: 5px;
