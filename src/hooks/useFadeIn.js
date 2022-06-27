@@ -7,12 +7,16 @@ export default function useFadeIn(duration, delay) {
   useEffect(() => {
     if (element.current) {
       const { current } = element;
-      current.style.transition = `opacity ${duration}s ease-in-out ${delay}s`;
       current.style.opacity = 1;
+      current.style.transform = "translateY(0%)";
+      current.style.transition = `all ${duration}ms ease-in-out ${delay}ms`;
     }
   }, []);
 
-  return { ref: element, style: { opacity: 0 } };
+  return {
+    ref: element,
+    style: { opacity: 0, transform: "translateY(10px)" },
+  };
 }
 
 useFadeIn.propTypes = {
