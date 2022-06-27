@@ -1,7 +1,7 @@
 # 실행방법
 
 ```
-git clone https://github.com/soozynn/baseball-game.git
+git clone https://github.com/soozynn/triple-task.git
 
 npm install
 ```
@@ -17,10 +17,10 @@ http://localhost:3000/ 을 실행시켜주세요.
 # 사용한 기술과 선택한 이유
 
 ```
-   "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0",
-    "styled-components": "^5.3.5",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.3.0",
+  "styled-components": "^5.3.5",
 ```
 
 - styled-components를 사용하게 된 이유
@@ -33,3 +33,7 @@ http://localhost:3000/ 을 실행시켜주세요.
 
 - 재사용성이 있는, 공용 컴포넌트 만들기
   과제 요구사항에서는 조금 벗어나지만, 개발자도구를 뜯어보면서 다른 섹션은 어떤 식으로 만들어져있는지에 대해 공부하는 시간을 가져보았습니다. 때문에 반복되어 사용되어지는 컴포넌트가 많다는 생각이 들어 컴포넌트를 만들 때에 최대한 작게 쪼개어 여러 곳에서도 재사용성있게 사용할 수 있도록 고민하면서 만들어보았습니다. 수정작업을 거치면서 컴포넌트를 작게 쪼개어 만들면 어떠한 이점이 있는지, 또 현재 내가 만들고 있는 방법이 좋은 방법인가에 대해서도 많이 생각해볼 수 있었던 시간이었습니다.
+
+## About
+
+과제 요구 사항의 코드는 components 폴더 내 Home 내부에 있는 AwardSection입니다. 감사합니다.
