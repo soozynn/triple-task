@@ -14,7 +14,7 @@ const NavBackground = styled.nav`
   opacity: ${(props) => (props.showsNavbar ? 1 : 0)};
   box-sizing: border-box;
   z-index: 3;
-  transform: translateY(${(props) => (props.showsNavbar ? "-100%" : "0%")});
+  transform: translateY(${(props) => (props.showsNavbar ? "0%" : "-100%")});
   transition: all 400ms ease-in-out 0s;
 `;
 
@@ -101,8 +101,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <NavBackground>
-      <NavContainer showsNavbar={showsNavbar}>
+    <NavBackground showsNavbar={showsNavbar}>
+      <NavContainer>
         <NavWrapper>
           <LogoWrapper to="/">
             <Logo src={blackLogoSrc} />
