@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import badgeTripleSrc from "../../../images/awardSection/badgeTriple.png";
@@ -102,6 +102,12 @@ export default function AwardSection() {
   const fadeInILogo = useFadeIn(700, 0);
   const fadeInTitle = useFadeIn(700, 300);
   const fadeInItems = useFadeIn(700, 500);
+  // 라이브 코딩 추가 예시 부분
+  const [inputValue, setInputValue] = useState(350);
+
+  const handleInputValue = (e) => {
+    setInputValue(e.target.value);
+  };
 
   return (
     <AwardSectionBackground>
@@ -111,12 +117,16 @@ export default function AwardSection() {
         </ContentLogo>
 
         <ContentArticles {...fadeInTitle}>
+          {
+            // 아래 추가 인풋 구문
+          }
+          <input value={inputValue} onChange={handleInputValue} />
           <AwardTitle
             title={
               <>
                 <strong>
                   <span>
-                    <CountUpAnimation>350</CountUpAnimation>
+                    <CountUpAnimation delay={2000}>350</CountUpAnimation>
                   </span>
                   만 명
                 </strong>
@@ -129,7 +139,7 @@ export default function AwardSection() {
               <>
                 <strong>
                   <span>
-                    <CountUpAnimation>21</CountUpAnimation>
+                    <CountUpAnimation delay={2000}>21</CountUpAnimation>
                   </span>
                   만 개
                 </strong>
@@ -142,7 +152,7 @@ export default function AwardSection() {
               <>
                 <strong>
                   <span>
-                    <CountUpAnimation>650</CountUpAnimation>
+                    <CountUpAnimation delay={2000}>650</CountUpAnimation>
                   </span>
                   만 개
                 </strong>
